@@ -3,14 +3,15 @@ public class Contract {
     private String admissionDate;
     private double wage;
     private int numberMinorChildren;
+    private double workHours;
 
-    protected Contract(String typeContract, String admissionDate, double wage, int numberMinorChildren){
+    protected Contract(String typeContract, String admissionDate, double wage, int numberMinorChildren, double workHours){
 
         setTypeContract(typeContract);
         setAdmissionDate(admissionDate);
         setWage(wage);
         setNumberMinorChildren(numberMinorChildren);
-
+        setWorkHours(workHours);
     }
 
     protected void setTypeContract (String typeContract){
@@ -43,6 +44,14 @@ public class Contract {
 
     protected int getNumberMinorChildren() {
         return numberMinorChildren;
+    }
+
+    protected void setWorkHours (double workHours){
+        this.workHours = workHours;
+    }
+
+    protected double getWorkHours (){
+        return workHours;
     }
 
 }
